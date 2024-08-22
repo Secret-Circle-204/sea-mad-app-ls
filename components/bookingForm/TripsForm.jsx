@@ -15,8 +15,7 @@ import jsPDF from 'jspdf'
 import html2canvas from 'html2canvas'
 import directus from '@/lib/directus'
 import { readItems, createItem } from '@directus/sdk'
-import { EVENT_ON_KEY_DOWN } from 'yet-another-react-lightbox'
-
+ 
 // const plan = {
 //   available_places: 5,
 //   boat: 'text',
@@ -38,7 +37,6 @@ export default function TripsForm({ plan, modalIsOpen, setModalIsOpen }) {
   // TripDetails component
   console.log('program-form data:', plan)
   console.log('program-form data:', plan.id)
-
   const [country, setCountry] = useState('')
   const [state, setState] = useState('')
   const [city, setCity] = useState('')
