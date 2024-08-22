@@ -1,0 +1,109 @@
+{
+  "compilerOptions": {
+    "typeRoots": [
+      "../node_modules/@types",
+      "../@types"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "lib": [
+      "es6"
+    ],
+    "moduleResolution": "node",
+    "noEmit": true,
+    "strict": true,
+    "target": "esnext",
+    "noImplicitAny": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "module": "esnext",
+    "resolveJsonModule": true
+  },
+  "include": [
+    "app",
+    "*.ts",
+    "*.tsx",
+    "*.js",
+    "*.jsx",
+    "public",
+    "global.d.ts",
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "app/error/page.jsx",
+    "app/contact/page.jsx",
+    "app/blog-sidebar/page.jsx",
+    "app/blog-details/page.jsx",
+    "app/blog-2/page.jsx",
+    "app/about/page.jsx",
+    "app/layout.jsx",
+    "app/head.jsx",
+    "app/signup/page.jsx",
+    "app/signin/page.jsx",
+    "components/Video/index.jsx",
+    "app/providers.jsx",
+    "app/page.jsx",
+    "components/Common/SectionTitle.jsx",
+    "components/Common/Breadcrumb.jsx",
+    "components/Common/ScrollUp.jsx",
+    "components/Common/SectionTitle.jsx",
+    "components/Features/featuresData.jsx",
+    "components/Features/index.jsx",
+    "components/Features/SingleFeature.jsx",
+    "components/Hero/index.jsx",
+    "components/About/AboutSectionTwo.jsx",
+    "components/About/AboutSectionOne.jsx",
+    "components/Testimonials/index.jsx",
+    "components/Testimonials/SingleTestimonial.jsx", 
+    "components/Blog/TagButton.jsx",
+    "components/Blog/SingleBlog.jsx",
+    "components/Blog/SharePost.jsx",
+    "components/Blog/RelatedPost.jsx",
+    "components/Blog/index.jsx",
+    "components/Blog/blogData.jsx",
+    "components/Contact/BookForm.jsx",
+    "components/Contact/index.jsx",
+    "components/Footer/index.jsx",
+    "components/Header/ThemeToggler.jsx",
+    "components/Header/menuData.jsx",
+    "components/Header/index.jsx",
+    "components/ScrollToTop/index.jsx",
+    "app/bookings/checkout/roomWidget.jsx",
+    "app/bookings/checkout/page.jsx",
+    "app/bookings/checkout/form.jsx",
+    "app/form.jsx",
+    "app/layout.jsx",
+    "lib/apis.js",
+    "app/bookings/rooms/page.jsx",
+    "app/bookings/error/page.jsx",
+    "app/api/webhook/stripe/route.js",
+    "app/api/checkout-session/route.js",
+    "lib/stripe.js",
+    "lib/directus.js",
+    "app/page.jsx",
+    "app/bookings/success/page.jsx",
+    "components/Brands/index.jsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+  // "exclude": [
+  //   "node_modules"
+  // ]
+}

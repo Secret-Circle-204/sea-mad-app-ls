@@ -1,0 +1,217 @@
+// //old map details
+// {/* start of map related plan details */}
+//             <div className=' w-full  flex flex-wrap items-center justify-between border-b border-body-color border-opacity-50 pb-4 dark:border-white dark:border-opacity-10'></div>
+//             <div className='map-location relative overflow-x-scroll   lg:w-full w-full  min-h-[800px] lg:min-h-[900px] max-sm:min-h-[350px] object-cover object-center rounded'>
+//               <Image
+//                 src={'/images/map-2.png'}
+//                 alt='sea-island'
+//                 fill
+//                 className='  w-full    h-[100%]   object-center rounded '
+//               />
+//               {/* ////// start of map info hover///////// */}
+//               {mapData?.map(mapData => (
+//                 <div
+//                   className='point-2    absolute top-[43%] left-[40%] group   text-2xl'
+//                   key={mapData?.id}
+//                 >
+//                   <button className=' h-10 w-10 opacity-0 text-center  items-center justify-center rounded-full   bg-blue3 text-white  inline-flex  group'>
+//                     <span className='  mt-2 text-2xl'>^</span>
+//                   </button>
+
+//                   {/* menu list */}
+//                   <div className='z-10  rounded   hidden text-white   group-hover:block py-5 px-8 text-sm font-light bg-blue3 sm:w-[500px] w-[320px] max-w-[700px]'>
+//                     <div className='  '>
+//                       <div className='pb-5'>
+//                         <p>{mapData?.desc}</p>
+//                       </div>
+
+//                       <div className='grid w-full grid-cols-1 gap-4  lg:grid-cols-3 lg:gap-8'>
+//                         {mapData?.images?.map(image => (
+//                           <div
+//                             key={image.src}
+//                             className='  h-[90px] bg-cover bg-center'
+//                             style={{
+//                               backgroundImage: `url(${image.src})`
+//                             }}
+//                           ></div>
+//                         ))}
+//                       </div>
+//                     </div>
+//                   </div>
+//                 </div>
+//               ))}
+//               {mapData?.map(mapData => (
+//                 <div
+//                   className='point-1     absolute  top-[20%] left-[35%] group   text-2xl'
+//                   key={mapData?.id}
+//                 >
+//                   <button className=' h-10 w-10 opacity-0  text-center  items-center justify-center rounded-full bg-blue3 text-white  inline-flex  group'>
+//                     <span className='  mt-2 text-2xl'>^</span>
+//                   </button>
+
+//                   {/* menu list */}
+//                   <div className='z-10  rounded   hidden text-white   group-hover:block py-5 px-8 text-sm font-light bg-blue3 sm:w-[500px] w-[320px] max-w-[700px]'>
+//                     <div className='  '>
+//                       <div className='pb-5'>
+//                         <p>{mapData?.desc}</p>
+//                       </div>
+
+//                       <div className='grid w-full grid-cols-1 gap-4  lg:grid-cols-3 lg:gap-8'>
+//                         {mapData?.images?.map(image => (
+//                           <div
+//                             key={image.src}
+//                             className='  h-[90px] bg-cover bg-center'
+//                             style={{
+//                               backgroundImage: `url(${image.src})`
+//                             }}
+//                           ></div>
+//                         ))}
+//                       </div>
+//                     </div>
+//                   </div>
+//                 </div>
+//               ))}
+//               {/* ///////end of  map info hover//////// */}
+//               {/* <div className='w-64 h-64 bg-red-100 relative'>
+//               <div
+//                 className='w-[300px] h-[300px] absolute inset-0 bg-cover bg-center z-0'
+//                 style={{ backgroundImage: 'url(/images/boat-3.jpg)' }}
+//               ></div>
+//               <div className='opacity-0 bg-dark hover:opacity-100 duration-300 font-light text-md text-white  p-3 absolute hover:translate-y-[-90px] inset-0 z-10 flex justify-center items-center '>
+//                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+//                 Pariatur cupiditate quo culpa dignissimos nemo amet aperiam
+//                 ullam! Recusandae, voluptate necessitatibus?
+//               </div>
+//             </div> */}
+//             </div>
+//             {/* end of map related plan details */}
+
+// <section className='trips_page relative w-full h-full  pt-14  text-gray-600 body-font max-w-[1200px]  mx-auto  '>
+//   {/* calendar */}
+//   <div className='max-w-[1200px] w-full mx-auto my-5 '>
+//     <CalendarMonths
+//       plan={plan}
+//       planfrom={plan.from}
+//       planto={plan.to}
+//       key={plan?.id}
+//     />
+//   </div>
+//   {/* <Calendar /> */}
+//   {/* table */}
+//   <div className='w-full mx-auto  '>
+//     <table className=' max-sm:bg-body-color my-table table-default uk-table jrt jrt-instance-1   '>
+//       <thead className=''>
+//         <tr>
+//           <th className='  py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100'>
+//             Date
+//           </th>
+//           <th className='  py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100'>
+//             Route
+//           </th>
+//           <th className='  py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100'>
+//             Trip Status
+//           </th>
+//           <th className='  py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100'>
+//             Available
+//           </th>
+//           <th className='  py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100'>
+//             Boat
+//           </th>
+//           <th className='  py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100'>
+//             Price
+//           </th>
+//           {/* <th className='  py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100'>
+//                   Start / End
+//                 </th> */}
+//           <th className='max-sm:hidden w-10 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tr rounded-br'></th>
+//         </tr>
+//       </thead>
+
+//       {/* tbody map data */}
+
+//       {/* {plan?.map((trip, i) => {
+//                 return (
+//                   <>
+//                     <Program
+//                       plan={plan}
+//                       planfrom={plan.from}
+//                       planto={plan.to}
+//                       key={i}
+//                       trip={trip}
+//                     />
+//                   </>
+//                 )
+//               })} */}
+
+//       {plan?.map((plan, index) => (
+//         <tbody key={index}>
+//           <tr className=' '>
+//             <td className=' sm:text-center sm:items-center jrt-cell-1 sm:max-w-[170px] sm:py-14 text-gray-900'>
+//               {plan?.from}
+//               <span uk-icon='arrow-right' className='uk-icon'>
+//                 <svg
+//                   width='20'
+//                   height='20'
+//                   viewBox='0 0 20 20'
+//                   xmlns='http://www.w3.org/2000/svg'
+//                 >
+//                   <polyline
+//                     fill='none'
+//                     stroke='#000'
+//                     points='10 5 15 9.5 10 14'
+//                   ></polyline>
+//                   <line
+//                     fill='none'
+//                     stroke='#000'
+//                     x1='4'
+//                     y1='9.5'
+//                     x2='15'
+//                     y2='9.5'
+//                   ></line>
+//                 </svg>
+//               </span>
+//               {plan?.to}
+//             </td>
+//             <td className=' routee sm:text-center items-center jrt-cell-2  sm:max-w-[160px]   sm:py-14 text-gray-900'>
+//               {plan?.name}
+//             </td>
+//             <td className='  sm:text-center items-center jrt-cell-3 sm:max-w-[170px] sm:py-14 text-gray-900'>
+//               {plan?.status}
+//             </td>
+
+//             <td className='  sm:text-center items-center jrt-cell-5 sm:max-w-[170px] sm:py-14   text-gray-900'>
+//               {plan?.available_places} Places
+//             </td>
+//             <td className='  sm:text-center items-center jrt-cell-6 sm:max-w-[170px] sm:py-14   text-gray-900'>
+//               {plan?.boat}
+//             </td>
+//             <td className='  sm:text-center items-center status planned jrt-cell-7  sm:max-w-[170px] sm:py-14   text-gray-900'>
+//               {plan.currency} {plan?.price}
+//             </td>
+
+//             <td className='uk-button w-10 sm:pr-5 text-center'>
+//               <a
+//                 href={`/trips/${plan?.id}`}
+//                 className='inline-block rounded bg-blue3 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700'
+//               >
+//                 View
+//               </a>
+//             </td>
+//           </tr>
+//           <tr className='gap'></tr>
+//         </tbody>
+//       ))}
+//     </table>
+//   </div>
+//   {/* table */}
+//   {/*
+//         <div className='flex items-center'>
+//           <span className='  title-font font-light text-base text-gray-700'>
+//             {' '}
+//             All Plans Include Breakfast and Lunch{' '}
+//           </span>
+//         </div> */}
+//   {/*form Modal */}
+
+//   {/* end form Modal */}
+// </section>
