@@ -7,33 +7,27 @@ import React, { useState, useEffect } from 'react'
 import Calendar from './calendar'
 import { format, parse, startOfMonth } from 'date-fns'
 // import { months } from './data.json'
-const months=[
-  
-  ["2024-05-27", 
-    "2024-06-15",
-    "2024-07-01",
-    "2024-08-01",
-    "2024-09-01",
-    "2024-10-01",
-    "2024-11-01",
-    "2024-12-01"
-  ],
-     [
-    "2024-05-27",
-    "2024-05-28",
-    "2024-05-29",
-    "2024-05-30",
-    "2024-05-31",
-    "2024-06-15",
-    "2024-07-01"
-  ]
 
-
-]
+const months = [
+  { month: 'December', },
+  { month: 'January', },
+  { month: 'February', },
+  { month: 'March', },
+  { month: 'April', },
+  { month: 'May', },
+  { month: 'June', },
+  { month: 'July', },
+  { month: 'August', },
+  { month: 'September', },
+  { month: 'October', },
+  { month: 'November', },
+  { month: 'December', }
+];
 const boatdata = [
   {
     id: 1,
     name: 'boat name',
+
 
     price: 10
   },
@@ -74,8 +68,8 @@ import directus from '@/lib/directus'
 import { readItems, createItem } from '@directus/sdk'
 // import Link from 'next/link'
 
-export default function Form () {
-  const router = useRouter()
+export default function Form() {
+  // const router = useRouter()
   const [loading, setLoading] = useState(false)
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
@@ -86,7 +80,7 @@ export default function Form () {
   const [message, setMessage] = useState('')
   const [number_of_guests, setNumberOfGuests] = useState(1)
   // const [address, setAddress] = useState('')
-  function handleClick () {
+  function handleClick() {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
@@ -120,7 +114,7 @@ export default function Form () {
     })
   }
 
-  async function handleSubmit (event) {
+  async function handleSubmit(event) {
     const formData = new FormData(event.target)
     event.preventDefault()
     //send to api//
@@ -149,7 +143,7 @@ export default function Form () {
           the_room,
           date,
           number_of_guests,
-          currMonth
+          months
         })
       )
 
@@ -219,20 +213,20 @@ export default function Form () {
   //   setCurrMonth((curr) => addMonths(curr, -1))
   // }
 
-  function onMonthChange (value) {
-    setCurrMonth(value)
-  }
+  // function onMonthChange (value) {
+  //   setCurrMonth(value)
+  // }
 
   return (
     <>
-      <ToastContainer />
+      {/* <ToastContainer /> */}
       <form onSubmit={handleSubmit} className='space-y-5'>
         <div className='space-y-1'>
           <label htmlFor=''>Name</label>
           <input
             className='mb-4 w-full rounded-md border border-body-color border-opacity-10 py-3 px-6 text-base font-medium text-body-color placeholder-body-color outline-none focus:border-primary focus:border-opacity-100 focus-visible:shadow-none dark:border-white dark:border-opacity-10 dark:bg-[#242B51] focus:dark:border-opacity-50'
             value={name}
-            onChange={e => setName(e.target.value)}
+            onChange={(e) => setName(e.target.value)}
             id={name}
             autoComplete='name'
             maxLength={50}
@@ -247,7 +241,7 @@ export default function Form () {
           <input
             className='mb-4 w-full rounded-md border border-body-color border-opacity-10 py-3 px-6 text-base font-medium text-body-color placeholder-body-color outline-none focus:border-primary focus:border-opacity-100 focus-visible:shadow-none dark:border-white dark:border-opacity-10 dark:bg-[#242B51] focus:dark:border-opacity-50'
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             id={email}
             autoComplete='email'
             maxLength={50}
@@ -262,7 +256,7 @@ export default function Form () {
           <input
             className='mb-4 w-full rounded-md border border-body-color border-opacity-10 py-3 px-6 text-base font-medium text-body-color placeholder-body-color outline-none focus:border-primary focus:border-opacity-100 focus-visible:shadow-none dark:border-white dark:border-opacity-10 dark:bg-[#242B51] focus:dark:border-opacity-50'
             value={phone}
-            onChange={e => setPhone(e.target.value)}
+            onChange={(e) => setPhone(e.target.value)}
             id={phone}
             autoComplete='phone'
             maxLength={50}
@@ -274,11 +268,11 @@ export default function Form () {
           />
         </div>
         <div>
-          <div className='space-y-1'>
+          {/* <div className='space-y-1'>
             <label htmlFor=''>Select Month</label>
             <select
               value={currMonth}
-              onChange={e => onMonthChange(e.target.value)}
+              onChange={(e) => onMonthChange(e.target.value)}
               id={currMonth}
               name='date'
               className='mb-4 w-full rounded-md border border-body-color border-opacity-10 py-3 px-6 text-base font-medium text-body-color placeholder-body-color outline-none focus:border-primary focus:border-opacity-100 focus-visible:shadow-none dark:border-white dark:border-opacity-10 dark:bg-[#242B51] focus:dark:border-opacity-50'
@@ -292,7 +286,7 @@ export default function Form () {
                 </option>
               ))}
             </select>
-          </div>
+          </div> */}
           <Calendar currMonth={currMonth} setCurrMonth={setCurrMonth} />
         </div>
         {/* <div className='grid grid-cols-2 gap-5'>
@@ -317,7 +311,7 @@ export default function Form () {
         <div className='space-y-1'>
           <label htmlFor=''>Number of guests</label>
           <input
-            onChange={e => setNumberOfGuests(e.target.value)}
+            onChange={(e) => setNumberOfGuests(e.target.value)}
             value={number_of_guests}
             className='mb-4 w-full rounded-md border border-body-color border-opacity-10 py-3 px-6 text-base font-medium text-body-color placeholder-body-color outline-none focus:border-primary focus:border-opacity-100 focus-visible:shadow-none dark:border-white dark:border-opacity-10 dark:bg-[#242B51] focus:dark:border-opacity-50'
             type='number'
@@ -333,7 +327,7 @@ export default function Form () {
             className=' w-full rounded-md border border-body-color border-opacity-10 py-3 px-6 text-base font-medium text-body-color placeholder-body-color outline-none focus:border-primary focus:border-opacity-100 focus-visible:shadow-none dark:border-white dark:border-opacity-10 dark:bg-[#242B51] focus:dark:border-opacity-50'
             name='boat'
             id={the_boat}
-            onChange={e => setTheBoat(e.target.value)}
+            onChange={(e) => setTheBoat(e.target.value)}
             value={the_boat}
           >
             {/* disabled selected */}
@@ -350,7 +344,7 @@ export default function Form () {
             className='mb-4 w-full rounded-md border border-body-color border-opacity-10 py-3 px-6 text-base font-medium text-body-color placeholder-body-color outline-none focus:border-primary focus:border-opacity-100 focus-visible:shadow-none dark:border-white dark:border-opacity-10 dark:bg-[#242B51] focus:dark:border-opacity-50'
             name='room'
             id={the_room}
-            onChange={e => setTheRoom(e.target.value)}
+            onChange={(e) => setTheRoom(e.target.value)}
             value={the_room}
           >
             {/* disabled selected */}
@@ -366,7 +360,7 @@ export default function Form () {
           <label htmlFor=''>Note or special requests</label>
           <textarea
             rows={10}
-            onChange={e => setMessage(e.target.value)}
+            onChange={(e) => setMessage(e.target.value)}
             value={message}
             className='px-3 py-2 w-full bg-white border border-gray-100 rounded'
             placeholder='Please enter your notes or special requests'

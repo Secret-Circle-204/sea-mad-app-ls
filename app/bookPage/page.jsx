@@ -2,7 +2,7 @@
 // import Contact from '@/components/Contact'
 // import Calendar from '@/components/Calendar'
 // import BookForm from '@/components/Contact/BookForm'
-import Form from '@/components/bookingForm/form'
+// import Form from '@/components/bookingForm/Form'
 
 const ContactPage = () => {
   return (
@@ -32,7 +32,7 @@ const ContactPage = () => {
               For your safety and enjoyable trip, the plan is flexible and may
               be rearranged or adjusted based on the weather forecast.
             </p>
-            <Form />
+            {/* <Form /> */}
           </div>
         </div>
       </div>

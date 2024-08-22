@@ -1,7 +1,5 @@
 ﻿'use client'
-import 'lightbox.js-react/dist/index.css'
-import { SlideshowLightbox, initLightboxJS } from 'lightbox.js-react'
-import Link from 'next/link'
+  import Link from 'next/link'
 
 import Image from 'next/image'
 import React, { useState, useEffect } from 'react'

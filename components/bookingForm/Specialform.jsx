@@ -1,38 +1,14 @@
-﻿//
-//  only default export is available soon
+﻿// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line no-use-before-define
 'use client'
 
 import { useState } from 'react'
 import Calendar from './calendar'
 import { format, parse, startOfMonth } from 'date-fns'
-// import { months } from './data.json'
+import { months } from './data.json'
 import { readItems } from '@directus/sdk'
 import directus from '@/lib/directus'
 import React, { useEffect } from 'react'
-
-const months=[
-  
-    ["2024-05-27", 
-      "2024-06-15",
-      "2024-07-01",
-      "2024-08-01",
-      "2024-09-01",
-      "2024-10-01",
-      "2024-11-01",
-      "2024-12-01"
-    ],
-       [
-      "2024-05-27",
-      "2024-05-28",
-      "2024-05-29",
-      "2024-05-30",
-      "2024-05-31",
-      "2024-06-15",
-      "2024-07-01"
-    ]
- 
-  
-]
 
 const mealsData = [
   {

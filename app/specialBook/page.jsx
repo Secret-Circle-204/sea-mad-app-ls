@@ -1,5 +1,6 @@
-﻿// import React from 'react'
-import SpecialForm from '@/components/bookingForm/Specialform'
+﻿//eslint-disable-next-line @next/next/no-img-element
+// eslint-disable-next-line react/prop-types
+// import SpecialForm from '@/components/bookingForm/Specialform'
 export default function SpecialBook () {
   return (
     <>
@@ -30,7 +31,7 @@ export default function SpecialBook () {
             </p>
             <hr className='border-gray-500' />
             <br />
-            <SpecialForm />
+            {/* <SpecialForm /> */}
           </div>
         </div>
       </div>

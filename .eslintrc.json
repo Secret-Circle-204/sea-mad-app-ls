@@ -17,16 +17,16 @@
     }
   },
   "plugins": [
-    "react-refresh",
+    "react-refresh"
     // "postcss",
     // "autoprefixer",
     // "react",
-    //  "import", 
-     "eslint-plugin-react-refresh"
+    //  "import",
+    //  "eslint-plugin-react-refresh"
      
   ],
   "rules": {
-    // "prettier/prettier": "error"
+    "prettier/prettier": "error",
     "@next/next/no-img-element": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-explicit-any": "off",
@@ -40,6 +40,7 @@
   },
   "extends": [
     "next/core-web-vitals"
+    // "plugin:react-refresh/recommended"
   ],
   "parserOptions": {
     // "ecmaVersion": "latest",
